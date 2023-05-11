@@ -1,0 +1,106 @@
+import java.util.*;
+
+class HistorialMedico {
+    private String nombre;
+    private String apellidos;
+    private String dni;
+    private int edad;
+    private String direccion;
+    private String telefono;
+    private List<String> enfermedades;
+    private List<String> medicamentos;
+    private List<String> alergias;
+    private List<String> vacunas;
+    private List<String> antecedentes;
+
+    public HistorialMedico(String nombre, String apellidos, String dni, int edad,
+            String direccion, String telefono, List<String> enfermedades,
+            List<String> medicamentos, List<String> alergias, List<String> vacunas,
+            List<String> antecedentes) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.dni = dni;
+        this.edad = edad;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.enfermedades = enfermedades;
+        this.medicamentos = medicamentos;
+        this.alergias = alergias;
+        this.vacunas = vacunas;
+        this.antecedentes = antecedentes;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public List<String> getEnfermedades() {
+        return enfermedades;
+    }
+
+    public List<String> getMedicamentos() {
+        return medicamentos;
+    }
+
+    public List<String> getAlergias() {
+        return alergias;
+    }
+
+    public List<String> getVacunas() {
+        return vacunas;
+    }
+
+    public List<String> getAntecedentes() {
+        return antecedentes;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre + " " + apellidos + "\n" +
+                "DNI: " + dni + "\n" +
+                "Edad: " + edad + "\n" +
+                "Dirección: " + direccion + "\n" +
+                "Teléfono: " + telefono + "\n" +
+                "Enfermedades: " + enfermedades + "\n" +
+                "Medicamentos: " + medicamentos + "\n" +
+                "Alergias: " + alergias + "\n" +
+                "Vacunas: " + vacunas + "\n" +
+                "Antecedentes: " + antecedentes + "\n";
+    }
+}
+
+public class ProgramaHistorialMedico {
+    public static void main(String[] args) {
+        List<String> enfermedades = Arrays.asList("Asma", "Diabetes");
+        List<String> medicamentos = Arrays.asList("Insulina");
+        List<String> alergias = Arrays.asList("Polen");
+        List<String> vacunas = Arrays.asList("Tétanos", "Gripe");
+        List<String> antecedentes = Arrays.asList("Cardiopatía");
+
+        HistorialMedico historial = new HistorialMedico("Juan", "Gómez",
+                "12345678A", 35, "C/ Mayor 1", "123456789", enfermedades, medicamentos,
+                alergias, vacunas, antecedentes);
+
+        System.out.println(historial);
+    }
+}
